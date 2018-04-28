@@ -25,7 +25,7 @@ function asyncFetchPages(restLink) {
     swapi
       .get(restLink)
       .then(response => {
-        response.results.forEach(function pushValue(value) {
+        response.results.forEach(value => {
           var starshipAux = new Starship(
             value.name,
             value.cost_in_credits,
