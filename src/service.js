@@ -8,7 +8,7 @@ const starshipList = [];
  */
 function getStarshipData(url) {
   return asyncFetchPages(url)
-    .then(function(response) {
+    .then(response => {
       if (response.next != null) {
         return getStarshipData(response.next).then(function() {
           return starshipList;
